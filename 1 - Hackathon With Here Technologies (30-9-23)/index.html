@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    
+    <!-- Link to the Tailwind CSS stylesheet -->
+    <link href = "https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel = "stylesheet">
+    
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    
+    <script src = "https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script src = "https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    
+    <!-- Favicon -->
+    <link rel = "icon" href = "/images/icon_3.png" type = "image/png">
+    <title>HERE Technologies [Priyesh Mishra | Geo_Manders]</title>
+</head>
+<body>
+
+  <div class = "prose">
+    <!-- Header Section -->
+    <header class = "fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div class = "container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class = "flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <!-- Logo -->
+          <img src = "/images/icon.png" fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-20 h-18 text-white p-2 rounded-full" viewBox = "0 0 24 24">
+          <path d = "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </a>
+        <!-- Navigation -->
+        <nav class = "md:mr-auto md:ml-4 md:py-2 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
+          <a href = "/index.html" class = "mr-5 hover:text-gray-900 leading-loose">Home</a>
+          <a class = "mr-5 hover:text-gray-900 leading-loose">Products</a>
+          <a class = "mr-5 hover:text-gray-900 leading-loose">Solutions</a>
+          <a class = "mr-5 hover:text-gray-900 leading-loose" href = "contact.html">Contact Us</a>
+        </nav>
+        <!-- Search Bar -->
+        <div class = "flex items-center space-x-4">
+          <label class = "relative block">
+            <span class = "sr-only">Search</span>
+            <span class = "absolute inset-y-0 left-0 flex items-center pl-2">
+              <svg class = "h-5 w-5 fill-slate-300" viewBox = "0 0 20 20"><!-- ... --></svg>
+            </span>
+            <input class = "placeholder-italic placeholder-text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+              placeholder = "Search documentation..." type = "text" name = "search" />
+          </label>
+          <!-- Login Button -->
+          <button class = "inline-flex items-center bg-indigo-250 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-500 rounded text-base mt-4 md:mt-0">Login
+            <svg fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2"
+              class = "w-4 h-4 ml-1" viewBox = "0 0 24 24">
+              <path d = "M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>    
+  
+  <div class = "dark-mode-toggle" id = "darkModeToggle">
+    <!-- Dark Mode Icon -->
+    <img src = "/images/darkMode.png" class = "h-10 w-10 text-white cursor-pointer" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" id = "moonIcon">
+
+    <path stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" d = "M19 14a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    <path stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" d = "M12 1v2m0 18v2m-5.37-1.026l-1.426 1.427M4 4.586l-1.414 1.414M21.414 21.414l-1.414-1.414M14.963 9.048a6.5 6.5 0 11-7.788 0M3 12h2m16-2h2M4.243 19.243l-1.414 1.414M18.95 5.05l-1.414 1.414"/>
+  </div>
+
+        
+  <div class = "section">
+    <section class = "text-gray-600 body-font">
+      <div class = "container px-5 py-24 mx-auto">
+        <div class = "flex flex-col text-center w-full mb-20">
+          <!-- Section Title -->
+          <h2 class = "text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">Emergency Solution</h2>
+          <h1 class = "sm:text-3xl text-10xl font-medium title-font mb-4 text-gray-900">Geo Manders</h1>
+          <p class = "lg:w-2/3 mx-auto leading-relaxed text-base">Modern Cartographers Of Modern World. Today's Anaximander - HERE Technologies!</p>
+        </div>
+        <div class = "flex flex-wrap">
+          <!-- Feature 1 -->
+          <div class = "xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+            <h2 class = "text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">One-Click Emergency Connect</h2>
+            <p class = "leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+            <a class = "text-indigo-500 inline-flex items-center">Learn More
+              <svg fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-4 h-4 ml-2" viewBox = "0 0 24 24">
+                <path d = "M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <!-- Feature 2 -->
+          <div class = "xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+            <h2 class = "text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Spatialized Filters</h2>
+            <p class = "leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+            <a class = "text-indigo-500 inline-flex items-center">Learn More
+              <svg fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-4 h-4 ml-2" viewBox = "0 0 24 24">
+                <path d = "M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <!-- Feature 3 -->
+          <div class = "xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+            <h2 class = "text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Map Canvas With HealthCare Facilities</h2>
+            <p class = "leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+            <a class = "text-indigo-500 inline-flex items-center">Learn More
+              <svg fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-4 h-4 ml-2" viewBox = "0 0 24 24">
+                <path d = "M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <!-- Feature 4 -->
+          <div class = "xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+            <h2 class = "text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">IoT Automations</h2>
+            <p class = "leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+            <a class = "text-indigo-500 inline-flex items-center">Learn More
+              <svg fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-4 h-4 ml-2" viewBox = "0 0 24 24">
+                <path d = "M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Button -->
+        <button class = "flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Future Roll-Outs</button>
+      </div>
+    </section>
+  </div>
+
+  <div class = "section">
+    <!-- Section Title | HERE Geocoding API use -->
+    <h1><strong>Geocoding User's Location [HERE Geocoding & Search API]</strong></h1>
+    
+    <!-- Location Input -->
+    <label for = "location">Enter Location:</label>
+    <input type = "text" id = "location" placeholder = "Enter an address or location">
+
+    <!-- Search Button -->
+    <button id = "searchBtn">Search</button>
+    
+    <!-- Result Display -->
+    <div id = "result"></div>
+  </div>
+
+  <div class = "section">
+    <!-- Section Title -->
+    <h1><strong>Hospitals</strong></h1>
+
+    <!-- Hospital List Display -->
+    <div id = "hospitalList"></div>
+  </div>
+
+      
+  <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBUOeOifFyiLPQYANrBtqGnfk3CCjxMQKo&libraries=places&callback=initMap" async defer></script>
+  <script>
+    // Your API Key for HERE Geocoding & Search API
+    const apiKey = "4l37AyU9SYsoTUPEAH1fhUIKW5Yh0g_6F3jTaaFFa7g";
+
+    // Get HTML elements by their IDs
+    const searchBtn = document.getElementById("searchBtn");
+    const locationInput = document.getElementById("location");
+    const resultDiv = document.getElementById("result");
+    const hospitalListDiv = document.getElementById("hospitalList");
+
+    // Event listener for the search button click
+    searchBtn.addEventListener("click", () => {
+        const userLocation = locationInput.value;
+        if (userLocation.trim() === "") {
+            resultDiv.innerHTML = "Please enter a location.";
+            return;
+        }
+
+        // Construct the geocode URL
+        const geocodeUrl = `https://geocode.search.hereapi.com/v1/geocode?q=${encodeURIComponent(userLocation)}&apiKey=${apiKey}`;
+
+        // Fetch the geocode data
+        fetch(geocodeUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (data.items && data.items.length > 0) {
+                    const location = data.items[0].position;
+                    const latitude = location.lat;
+                    const longitude = location.lng;
+
+                    // Display latitude and longitude
+                    resultDiv.innerHTML = `Latitude: ${latitude}, Longitude: ${longitude}`;
+
+                    // Call the findNearbyHospitals function
+                    google.maps.event.addDomListener(window, 'load', () => {
+                        findNearbyHospitals(latitude, longitude);
+                    });
+                } else {
+                    resultDiv.innerHTML = "Location not found.";
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                resultDiv.innerHTML = "An error occurred.";
+            });
+    });
+
+    // Function to find nearby hospitals using Google Places API
+    function findNearbyHospitals(latitude, longitude) {
+        const pyrmont = new google.maps.LatLng(latitude, longitude);
+
+        const map = new google.maps.Map(document.createElement('div'));
+        const request = {
+            location: pyrmont,
+            radius: 10000,
+            types: ['hospital', 'health']
+        };
+        const service = new google.maps.places.PlacesService(map);
+
+        // Perform a nearby search for hospitals
+        service.nearbySearch(request, (results, status) => {
+            if (status == google.maps.places.PlacesServiceStatus.OK) {
+                if (results.length > 0) {
+                    const hospitalAddresses = results.map(place => place.vicinity);
+                    displayHospitalAddresses(hospitalAddresses);
+                } else {
+                    hospitalListDiv.innerHTML = "<p>No nearby hospitals found.</p>";
+                }
+            }
+        });
+    }
+
+    // Function to display hospital addresses in the HTML
+    function displayHospitalAddresses(addresses) {
+        hospitalListDiv.innerHTML = "<h2>Nearby Hospitals</h2>";
+        if (addresses.length > 0) {
+            addresses.forEach(address => {
+                hospitalListDiv.innerHTML += `<p>${address}</p>`;
+            });
+        } else {
+            hospitalListDiv.innerHTML += "<p>No nearby hospitals found.</p>";
+        }
+    }
+  </script>
+    
+  <div class = "section">
+    <!-- Section Title -->
+    <h1><strong>Best Route [HERE Routing API]</strong></h1>
+
+    <!-- Latitude Input -->
+    <label for = "latitude">Latitude:</label>
+    <input type = "text" id = "latitude" placeholder = "Enter latitude">
+    <br>
+
+    <!-- Longitude Input -->
+    <label for = "longitude">Longitude:</label>
+    <input type = "text" id = "longitude" placeholder = "Enter longitude">
+    <br>
+
+    <!-- Find Route Button -->
+    <button onclick = "findBestRoute()">Find Route</button>
+
+    <!-- Route Details Display -->
+    <div id = "routeDetails"></div>
+  </div>
+  
+  
+  <script>
+    const apiKeyRouter = "uZ91Ar8cjQoRl8y9LqavPdyo48tdy6DGKBOHx4Y_HfA";
+    const baseUrl = "https://router.hereapi.com/v8/routes";
+
+    function findBestRoute() {
+        // Get latitude and longitude input values
+        const latitude = document.getElementById('latitude').value;
+        const longitude = document.getElementById('longitude').value;
+        const destination = '52.5323,13.3789';
+
+        // Create the final API URL
+        const finalApiURL = `${baseUrl}?transportMode=car&origin=${latitude},${longitude}&destination=${destination}&return=summary&apikey=${apiKeyRouter}`;
+
+        // Fetch route data from the API
+        fetch(finalApiURL)
+            .then(response => response.json())
+            .then(data => {
+                if (data.routes && data.routes.length > 0) {
+                    // Extract route details
+                    const route = data.routes[0];
+                    const duration = route.sections[0].summary.duration;
+                    const mode = route.sections[0].transport.mode;
+                    const length = route.sections[0].summary.length;
+
+                    // Create route details HTML
+                    const routeDetails = `
+                        <h3>Route Details</h3>
+                        <p>Duration: ${duration} seconds</p>
+                        <p>Mode: ${mode}</p>
+                        <p>Length: ${length} meters</p>
+                    `;
+
+                    // Display route details
+                    document.getElementById('routeDetails').innerHTML = routeDetails;
+                } else {
+                    document.getElementById('routeDetails').innerHTML = 'No route found.';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('routeDetails').innerHTML = 'Error finding the route.';
+            });
+    }
+  </script>
+      
+  <div class = "section">
+    <!-- Section Title -->
+    <h1><strong>Nearby Hospitals [OpenStreetMap API]</strong></h1>
+
+    <!-- Latitude Input -->
+    <label for = "latitude">Enter Latitude:</label>
+    <input type = "text" id = "latitude" placeholder = "Enter latitude">
+    <br><br>
+
+    <!-- Longitude Input -->
+    <label for = "longitude">Enter Longitude:</label>
+    <input type = "text" id = "longitude" placeholder = "Enter longitude">
+    <br><br>
+
+    <!-- Search Hospitals Button -->
+    <button id = "searchBtnOpen">Search Hospitals</button>
+
+    <!-- Result Display -->
+    <div id = "resultDivOpen"></div>
+
+    <script>
+        // Get DOM elements
+        const searchBtnOpen = document.getElementById("searchBtnOpen");
+        const latitudeInput = document.getElementById("latitude");
+        const longitudeInput = document.getElementById("longitude");
+        const resultDivOpen = document.getElementById("resultDivOpen");
+
+        // Add click event listener to the search button
+        searchBtnOpen.addEventListener("click", () => {
+            const latitude = latitudeInput.value.trim();
+            const longitude = longitudeInput.value.trim();
+
+            if (!latitude || !longitude) {
+                resultDivOpen.innerHTML = "Please enter both latitude and longitude.";
+                return;
+            }
+
+            // Create URL for fetching nearby hospitals
+            const hospitalsUrl = `https://nominatim.openstreetmap.org/search?format=json&q=hospital&lat=${latitude}&lon=${longitude}&limit=10`;
+
+            // Fetch nearby hospitals data
+            fetch(hospitalsUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        resultDivOpen.innerHTML = "<h2>Nearby Hospitals</h2>";
+                        data.forEach(hospital => {
+                            resultDivOpen.innerHTML += `<p>Name: ${hospital.display_name}<br>Distance: ${hospital.distance} meters</p>`;
+                        });
+                    } else {
+                        resultDivOpen.innerHTML = "No nearby hospitals found.";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching nearby hospitals:", error);
+                    resultDivOpen.innerHTML = "Error fetching nearby hospitals.";
+                });
+        });
+    </script>
+  </div>
+
+  <div class = "section">
+    <!-- Section Title -->
+    <h1><strong>One-Click Emergency Connect [Twilio API]</strong><br /><br /></h1>
+
+    <!-- Emergency Button -->
+    <button id = "emergencyBtn" onclick="initiateEmergencyCall()">Emergency</button>
+
+    <!-- Message Display -->
+    <div id = "message"></div>
+  </div>
+
+  <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      // Twilio API credentials
+      const twilioApiKeySid = 'SKf97234ef178ad8039ff76829829c9d74';
+      const twilioApiKeySecret = 'ypkR1ZJUVtzujyD8wvrdZsRUmLB1O9fl';
+      const twilioAccountSid = 'AC0ca39f3745e046a8a9496a9aa38d2f50';
+      const twilioPhoneNumber = '+12512208830';
+  
+      // Function to initiate an emergency call
+      function initiateEmergencyCall() {
+          // Prompt the user for their phone number
+          const phoneNumber = prompt('Enter your phone number (with country code):');
+          const messageDiv = document.getElementById('message');
+  
+          if (phoneNumber) {
+              messageDiv.innerHTML = 'Initiating emergency call...';
+              messageDiv.style.color = 'indigo';
+  
+              // Send an AJAX request to initiate the call
+              $.ajax({
+                  type: 'POST',
+                  url: 'https://api.twilio.com/2010-04-01/Accounts/' + twilioAccountSid + '/Calls.json',
+                  data: {
+                      From: twilioPhoneNumber,
+                      To: phoneNumber,
+                      Url: 'https://demo.twilio.com/docs/voice.xml', // Replace with your TwiML URL
+                  },
+                  headers: {
+                      'Authorization': 'Basic ' + btoa(twilioApiKeySid + ':' + twilioApiKeySecret)
+                  },
+                  success: function (response) {
+                      messageDiv.innerHTML = 'Emergency call initiated successfully.';
+                      messageDiv.style.color = 'green';
+                  },
+                  error: function (error) {
+                      messageDiv.innerHTML = 'Error initiating emergency call: ' + error.responseText;
+                      messageDiv.style.color = 'red';
+                  }
+              });
+          }
+      }
+  </script>  
+
+  <div class = "section">
+    <section class = "text-gray-600 body-font">
+      <div class = "container px-5 py-24 mx-auto flex flex-wrap">
+        <!-- First Item -->
+        <div class = "flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+          <div class = "h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class = "h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div class = "flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+          <div class = "flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class = "flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <svg fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-12 h-12" viewBox = "0 0 24 24">
+                <path d = "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class = "flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class = "font-medium title-font text-gray-900 mb-1 text-xl">IoT Simulators API Integration</h2>
+              <p class = "leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            </div>
+          </div>
+        </div>
+        <div class = "flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+          <div class = "h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class = "h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div class = "flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+          <div class = "flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class = "flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <svg fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin="round" stroke-width = "2" class = "w-12 h-12" viewBox = "0 0 24 24">
+                <path d = "M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div class = "flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class = "font-medium title-font text-gray-900 mb-1 text-xl">HealthCare's Endpoint Deployment & Use Object-Oriented Design</h2>
+              <p class = "leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            </div>
+          </div>
+        </div>
+        <div class = "flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+          <div class = "h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class = "h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div class = "flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+          <div class = "flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class = "flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <svg fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-12 h-12" viewBox = "0 0 24 24">
+                <circle cx = "12" cy = "5" r = "3"></circle>
+                <path d = "M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+              </svg>
+            </div>
+            <div class = "flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class = "font-medium title-font text-gray-900 mb-1 text-xl">Backend: Contact Authentication, Dashboard & Relay Informatics To HealthCares</h2>
+              <p class = "leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            </div>
+          </div>
+        </div>
+        <div class = "flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+          <div class = "h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class = "h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div class = "flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+          <div class = "flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class = "flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <svg fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-12 h-12" viewBox = "0 0 24 24">
+                <path d = "M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx = "12" cy = "7" r = "4"></circle>
+              </svg>
+            </div>
+            <div class = "flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class = "font-medium title-font text-gray-900 mb-1 text-xl">Introduce 3JS, Parallax, Dark Mode Toggle & Interactive CSS</h2>
+              <p class = "leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Start of FAQ section -->      
+  <div class = "section">
+    <div class = "w-250 py-8 px-8 max-w-lg mx-auto p-8">
+      <section class = "text-gray-600 body-font">
+        <h1 class = "text-2xl font-medium title-font mb-1 text-indigo-500 text-center">FAQs</h1>
+        <p class = "text-lg text-slate-900 text-center mb-8">Frequently Asked Questions</p>
+        <div class = "mb-12"></div>
+        <details class = "mb-6 bg-white rounded-xl shadow-lg overflow-hidden" open>
+          <summary class = "text-lg leading-6 text-indigo-500 dark:text-white font-semibold select-none flex items-center justify-center">
+            Why do they call it Ovaltine?
+            <svg xmlns = "http://www.w3.org/2000/svg" fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-5 h-5" viewBox = "0 0 24 24">
+              <path d = "M9 5l7 7-7 7"></path>
+            </svg>
+          </summary>
+          <div class = "mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 p-6 text-center">
+            <p>The mug is round. The jar is round. They should call it Roundtine.</p>
+          </div>
+        </details>
+        <details class = "mb-6 bg-white rounded-xl shadow-lg overflow-hidden" open>
+          <summary class = "text-lg leading-6 text-indigo-500 dark:text-white font-semibold select-none flex items-center justify-center">
+            Why do they call it Ovaltine?
+            <svg xmlns = "http://www.w3.org/2000/svg" fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-5 h-5" viewBox = "0 0 24 24">
+              <path d = "M9 5l7 7-7 7"></path>
+            </svg>
+          </summary>
+          <div class = "mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 p-6 text-center">
+            <p>The mug is round. The jar is round. They should call it Roundtine.</p>
+          </div>
+        </details>
+        <details class = "mb-6 bg-white rounded-xl shadow-lg overflow-hidden" open>
+          <summary class = "text-lg leading-6 text-indigo-500 dark:text-white font-semibold select-none flex items-center justify-center">
+            Why do they call it Ovaltine?
+            <svg xmlns = "http://www.w3.org/2000/svg" fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin="round" stroke-width = "2" class = "w-5 h-5" viewBox = "0 0 24 24">
+              <path d = "M9 5l7 7-7 7"></path>
+            </svg>
+          </summary>
+          <div class = "mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 p-6 text-center">
+            <p>The mug is round. The jar is round. They should call it Roundtine.</p>
+          </div>
+        </details>
+        <details class = "mb-6 bg-white rounded-xl shadow-lg overflow-hidden" open>
+          <summary class = "text-lg leading-6 text-indigo-500 dark:text-white font-semibold select-none flex items-center justify-center">
+            Why do they call it Ovaltine?
+            <svg xmlns = "http://www.w3.org/2000/svg" fill = "none" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-5 h-5" viewBox = "0 0 24 24">
+              <path d = "M9 5l7 7-7 7"></path>
+            </svg>
+          </summary>
+          <div class = "mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 p-6 text-center">
+            <p>The mug is round. The jar is round. They should call it Roundtine.</p>
+          </div>
+        </details>
+      </section>
+    </div>
+  </div>
+        
+  <div class = "section">
+    <section class = "text-gray-600 body-font">
+      <div class = "container px-5 py-24 mx-auto">
+        <div class = "flex flex-col text-center w-full mb-20">
+          <h1 class = "sm:text-3xl text-2xl font-medium title-font mb-4 text-indigo-500">Our Team</h1>
+          <p class = "lg:w-2/3 mx-auto leading-relaxed text-base">Meet our team members and learn about their qualifications.</p>
+        </div>
+        <div class = "flex justify-center">
+          <!-- Team Member 1 -->
+          <div class = "w-98 h-46 py-8 px-8 max-w-sm mx-2 bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class = "block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src = "/img/erin-lindford.jpg" alt = "Team Member 1" />
+            <div class = "text-center space-y-2 sm:text-left">
+              <div class = "space-y-0.5">
+                <p class = "text-lg text-black font-semibold">Rohit Pathak</p>
+                <p class = "text-slate-500 font-medium">B.E. Mechanical & M.Sc. Physics</p>
+              </div>
+              <button class = "px-6 py-1 text-lg font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Contact</button>
+            </div>
+          </div>
+  
+          <!-- Team Member 2 -->
+          <div class = "w-98 h-46 py-8 px-8 max-w-sm mx-2 bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class = "block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src = "/images/Priyesh Mishra.jpg" alt = "Team Member 2" />
+            <div class = "text-center space-y-2 sm:text-left">
+              <div class = "space-y-0.5">
+                <p class = "text-lg text-black font-semibold">Priyesh Mishra</p>
+                <p class = "text-slate-500 font-medium">B.E. Electronics And Communication & M.Sc. Physics</p>
+              </div>
+              <button class = "px-6 py-1 text-lg font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Contact</button>
+            </div>
+          </div>
+  
+          <!-- Team Member 3 -->
+          <div class = "w-98 h-46 py-8 px-8 max-w-sm mx-2 bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class = "block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src = "/img/erin-lindford.jpg" alt = "Team Member 3" />
+            <div class = "text-center space-y-2 sm:text-left">
+              <div class = "space-y-0.5">
+                <p class = "text-lg text-black font-semibold">Rajeev Chourasiya</p>
+                <p class = "text-slate-500 font-medium">B.E. Electrical & M.Sc. Biology</p>
+              </div>
+              <button class = "px-6 py-1 text-lg font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>  
+      
+  <div class = "section">
+    <footer class = "text-gray-600 body-font">
+      <div class = "container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <!-- Brand Logo and Description -->
+        <div class = "w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+          <a class = "flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <img src = "/images/icon_3.png" fill = "none" stroke = "currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 rounded-full" viewBox="0 0 24 24">
+            <span class = "ml-3 text-xl">Here Technologies</span>
+          </a>
+          <p class = "mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
+        </div>
+        
+        <!-- Footer Navigation Links -->
+        <div class = "flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+          <!-- APIs Links -->
+          <div class = "lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class = "title-font font-medium text-gray-900 tracking-widest text-sm mb-3">APIs</h2>
+            <nav class = "list-none mb-10">
+              <li>
+                <a class = "text-gray-600 hover:text-gray-800">First Link</a>
+              </li>
+              <li>
+                <a class = "text-gray-600 hover:text-gray-800">Second Link</a>
+              </li>
+              <li>
+                <a class = "text-gray-600 hover:text-gray-800">Third Link</a>
+              </li>
+              <li>
+                <a class = "text-gray-600 hover:text-gray-800">Fourth Link</a>
+              </li>
+            </nav>
+          </div>
+  
+          <!-- Plugins Links (Repeat structure for other sections if needed) -->
+          <div class = "lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class = "title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Plugins</h2>
+            <nav class = "list-none mb-10">
+              <li>
+                <a class = "text-gray-600 hover:text-gray-800">First Link</a>
+              </li>
+              <li>
+                <a class = "text-gray-600 hover:text-gray-800">Second Link</a>
+              </li>
+              <li>
+                <a class = "text-gray-600 hover:text-gray-800">Third Link</a>
+              </li>
+              <li>
+                <a class = "text-gray-600 hover:text-gray-800">Fourth Link</a>
+              </li>
+            </nav>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Footer Bottom Section -->
+      <div class = "bg-gray-100">
+        <div class = "container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+          <!-- Copyright and Social Links -->
+          <p class = "text-gray-500 text-sm text-center sm:text-left">© 2023 HERE Technologies —
+            <a href = "https://twitter.com/knyttneve" rel = "noopener noreferrer" class = "text-gray-600 ml-1" target="_blank">@PriyeshMishra</a>
+          </p>
+          <span class = "inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <!-- Social Media Icons (Add links and icons as needed) -->
+            <a class = "text-gray-500">
+              <svg fill = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-5 h-5" viewBox = "0 0 24 24">
+                <path d = "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class ="ml-3 text-gray-500">
+              <svg fill ="currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class="w-5 h-5" viewBox = "0 0 24 24">
+                <path d ="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class ="ml-3 text-gray-500">
+              <svg fill ="currentColor" stroke = "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-5 h-5" viewBox = "0 0 24 24">
+                <path stroke ="none" d = "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx = "4" cy = "4" r = "2" stroke = "none"></circle>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill = "none" stroke= "currentColor" stroke-linecap = "round" stroke-linejoin = "round" stroke-width = "2" class = "w-5 h-5" viewBox = "0 0 24 24">
+                <rect width = "20" height = "20" x = "2" y = "2" rx = "5" ry = "5"></rect>
+                <path d = "M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
